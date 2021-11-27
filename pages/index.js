@@ -2,13 +2,24 @@ import Head from "next/head";
 import Image from "next/image";
 import Container from "@mui/material/Container";
 import styles from "./styles/Home.module.css";
+import {
+  Avatar,
+  Grid,
+  Link,
+  List,
+  ListItem,
+  ListItemAvatar,
+  ListItemText,
+  Typography,
+} from "@mui/material";
+import FolderIcon from "@mui/icons-material/Folder";
 
 export default function Home({ data, repos }) {
   console.log(data);
   console.log(repos);
 
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="lg">
       <section className={styles.container}>
         <Image
           src={data.avatar_url}
@@ -18,27 +29,42 @@ export default function Home({ data, repos }) {
           alt="Breno Nogueira Araújo"
         />
         <br />
-        <div>
+        <div className={styles.bio}>
           <h1>{data.name}</h1>
           <span>{data.bio}</span> <br />
           <span>{data.location}</span>
         </div>
       </section>
       <main>
-        <h1>Projetos</h1>
-        <ul>
-          {repos
-            ? repos.map((repo) => {
-                return (
-                  <li key={repo.id}>
-                    <a href={repo.html_url} target="_blank" rel="noreferrer">
-                      {repo.name}
-                    </a>
-                  </li>
-                );
-              })
-            : null}
-        </ul>
+        <Grid item xs={12} md={12}>
+          <Typography sx={{ mt: 4 }} variant="h6" component="div">
+            Projetos
+          </Typography>
+          <List className={styles.list}>
+            {repos
+              ? repos.map((repo) => {
+                  return (
+                    <ListItem key={repo.id}>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <FolderIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <Link
+                        style={{ textDecoration: "none",   textShadow:  '#CCC 1px 0 10px', color: 'chartreuse' }}
+                        href={repo.html_url}
+                      >
+                        <ListItemText
+                          primary={repo.name}
+                          secondary={repo.language}
+                        />
+                      </Link>
+                    </ListItem>
+                  );
+                })
+              : null}
+          </List>
+        </Grid>
       </main>
     </Container>
   );
@@ -49,7 +75,7 @@ export async function getStaticProps(context) {
   const data = await res.json();
 
   const res2 = await fetch(
-    `https://api.github.com/users/brenonogueira/repos?per_page=100`
+    `https://api.github.com/users/brenonogueira/repos?per_page=60`
   );
   const repos = await res2.json();
 

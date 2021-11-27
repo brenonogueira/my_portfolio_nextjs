@@ -4,7 +4,32 @@
   align-items: center
 }
 
+.bio {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 10px;
+  text-shadow:  #CCC 1px 0 10px;
+  color: azure;
+}
+
+.bio span {
+  color:chartreuse;
+  text-shadow:  #CCC 1px 0 10px ;
+}
+
 .img { 
   border-radius: 100px;
   padding: 20px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .list {
+    display: block;
+   
+  }
 }
