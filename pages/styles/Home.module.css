@@ -1,22 +1,23 @@
 .container {
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
 
 .bio {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding: 10px;
-  text-shadow:  #CCC 1px 0 10px;
+  text-shadow: #ccc 1px 0 10px;
   color: azure;
 }
 
 .bio span {
-  color:chartreuse;
-  text-shadow:  #CCC 1px 0 10px ;
+  color: chartreuse;
+  text-shadow: #ccc 1px 0 10px;
 }
 
-.img { 
+.img {
   border-radius: 100px;
   padding: 20px;
 }
@@ -26,10 +27,37 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
+.list_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.list_social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+}
+
+.list_social li {
+  padding: 20px;
+}
+
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
   .list {
     display: block;
-   
+  }
+
+  .list_social {
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  }
+
+  .list_social li {
+
   }
 }

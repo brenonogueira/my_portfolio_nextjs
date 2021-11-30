@@ -13,6 +13,16 @@ import {
   Typography,
 } from "@mui/material";
 import FolderIcon from "@mui/icons-material/Folder";
+import {
+  FaTwitter,
+  FaSpotify,
+  FaInstagram,
+  FaLastfm,
+  FaGithub,
+  FaSteam,
+  FaLinkedin,
+  FaPinterest,
+} from "react-icons/fa";
 
 export default function Home({ data, repos }) {
   console.log(data);
@@ -36,7 +46,86 @@ export default function Home({ data, repos }) {
         </div>
       </section>
       <main>
-        <Grid item xs={12} md={12}>
+        <Grid  xs={12} md={12} className={styles.list_container}>
+          <ul className={styles.list_social}>
+            <li>
+              <a
+                href="https://twitter.com/brenongr"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaTwitter  size={60} color="#1DA1F2" />
+              </a>
+            
+            </li>
+            <li>
+              <a
+                href="https://br.linkedin.com/in/brenongr"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedin size={60} color="#1DA1F2" />
+              </a>
+            
+            </li>
+            <li>
+              <a
+                href="https://open.spotify.com/user/12148153276?si=Znl6HFdfTmiQALQgXQPC3Q&nd=1"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaSpotify size={60} color="#1DB954" />
+              </a>
+            
+            </li>
+            <li>
+              <a
+                href="https://instagram.com/brenongr"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaInstagram size={60} color="#E1306C" />
+              </a>
+             
+            </li>
+            <li>
+              <a
+                href=" https://www.last.fm/pt/user/mrbrenow"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLastfm size={60} color="#FF0000" />
+              </a>
+            
+            </li>
+            <li>
+              <a
+                href=" https://br.pinterest.com/brenongr/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaPinterest size={60} color="#FF0000" />
+              </a>
+            
+            </li>
+            <li>
+              <a
+                href="https://github.com/brenonogueira"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaGithub  size={60} color="#6e5494" />
+                
+              </a>
+            
+            </li>
+            {/* <li>
+              <FaSteam size={50} color="#00adee" />{" "}
+            </li> */}
+          </ul>
+        </Grid>
+
+        {/* <Grid item xs={12} md={12}>
           <Typography sx={{ mt: 4 }} variant="h6" component="div">
             Projetos
           </Typography>
@@ -51,7 +140,11 @@ export default function Home({ data, repos }) {
                         </Avatar>
                       </ListItemAvatar>
                       <Link
-                        style={{ textDecoration: "none",   textShadow:  '#CCC 1px 0 10px', color: 'chartreuse' }}
+                        style={{
+                          textDecoration: "none",
+                          textShadow: "#CCC 1px 0 10px",
+                          color: "chartreuse",
+                        }}
                         href={repo.html_url}
                       >
                         <ListItemText
@@ -64,7 +157,7 @@ export default function Home({ data, repos }) {
                 })
               : null}
           </List>
-        </Grid>
+        </Grid> */}
       </main>
     </Container>
   );
