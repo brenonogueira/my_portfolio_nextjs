@@ -25,8 +25,8 @@ import {
 } from "react-icons/fa";
 
 export default function Home({ data, repos }) {
-  console.log(data);
-  console.log(repos);
+  // console.log(data);
+  // console.log(repos);
 
   return (
     <Container maxWidth="lg">
