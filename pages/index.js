@@ -34,8 +34,8 @@ export default function Home({ data, repos }) {
         <Image
           src={data.avatar_url}
           className={styles.img}
-          width="200"
-          height="200"
+          width={200}
+          height={200}
           alt="Breno Nogueira Araújo"
         />
         <br />
@@ -46,7 +46,7 @@ export default function Home({ data, repos }) {
         </div>
       </section>
       <main>
-        <Grid  xs={12} md={12} className={styles.list_container}>
+        <Grid xs={12} md={12} className={styles.list_container}>
           <ul className={styles.list_social}>
             <li>
               <a
@@ -54,9 +54,9 @@ export default function Home({ data, repos }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaTwitter  size={60} color="#1DA1F2" />
+                <FaTwitter size={60} color="#1DA1F2" />
               </a>
-            
+
             </li>
             <li>
               <a
@@ -66,7 +66,7 @@ export default function Home({ data, repos }) {
               >
                 <FaLinkedin size={60} color="#1DA1F2" />
               </a>
-            
+
             </li>
             <li>
               <a
@@ -76,7 +76,7 @@ export default function Home({ data, repos }) {
               >
                 <FaSpotify size={60} color="#1DB954" />
               </a>
-            
+
             </li>
             <li>
               <a
@@ -86,7 +86,7 @@ export default function Home({ data, repos }) {
               >
                 <FaInstagram size={60} color="#E1306C" />
               </a>
-             
+
             </li>
             <li>
               <a
@@ -96,7 +96,7 @@ export default function Home({ data, repos }) {
               >
                 <FaLastfm size={60} color="#FF0000" />
               </a>
-            
+
             </li>
             <li>
               <a
@@ -106,7 +106,7 @@ export default function Home({ data, repos }) {
               >
                 <FaPinterest size={60} color="#FF0000" />
               </a>
-            
+
             </li>
             <li>
               <a
@@ -114,10 +114,10 @@ export default function Home({ data, repos }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaGithub  size={60} color="#6e5494" />
-                
+                <FaGithub size={60} color="#6e5494" />
+
               </a>
-            
+
             </li>
             {/* <li>
               <FaSteam size={50} color="#00adee" />{" "}

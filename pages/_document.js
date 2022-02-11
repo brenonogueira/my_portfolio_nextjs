@@ -5,7 +5,6 @@ export default function Document() {
     <Html>
       <title>Breno Nogueira Araújo</title>
       <Head> 
-      <link rel="icon" href="" />
       </Head>
       <body>
         <Main />
